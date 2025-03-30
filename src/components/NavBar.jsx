@@ -58,7 +58,7 @@ function NavBar() {
         <div className="flex gap-3">
           <RouterLink
             to="/docs"
-            className="hidden lg:inline-flex cursor-pointer text-green-500 border-0 px-3 py-2 rounded-md"
+            className="flex lg:inline-flex cursor-pointer text-green-500 border-0 px-3 py-2 rounded-md"
           >
             Docs
           </RouterLink>
