@@ -1,9 +1,20 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import dashboardImage from "../assets/images/dashboardImage.png";
 import dashboardImageLight from "../assets/images/dashboardImageLight.png";
-function HeroSection() {
+
+function HeroSection({ isDarkTheme }) {
+  const [image, setImage] = useState(
+    isDarkTheme ? dashboardImageLight : dashboardImage
+  );
+
+  // Update the image when the theme changes
+  useEffect(() => {
+    setImage(isDarkTheme ? dashboardImageLight : dashboardImage);
+  }, [isDarkTheme]);
+
   return (
-    <div id="Home" className="w-full ">
+    <div id="Home" className="w-full">
       <div className="w-full text-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -12,7 +23,7 @@ function HeroSection() {
           className="gap-6 flex flex-col items-center justify-center font-bold mx-4 my-6 text-slate-800 dark:text-white"
         >
           <h1 className="mt-2 lg:mt-14 text-3xl sm:text-5xl md:text-6xl lg:text-7xl ">
-            The PHARMT<span className="text-green-500">i</span>C
+            The Pharma<span className="text-green-500">+</span>ic
           </h1>
           <p className="flex font-normal w-full md:w-1/2 text-center">
             Empowering pharmacies with innovative solutions designed to
@@ -44,7 +55,7 @@ function HeroSection() {
           className="dashboad-image"
         >
           <img
-            src={dashboardImage}
+            src={image}
             alt="Pharmatic-dashboard"
             className="w-full h-auto border border-slate-500 p-2 rounded-lg shadow-[0_10px_30px_rgba(0,0,255,0.2)]"
           />

@@ -15,7 +15,6 @@ function Features({ isDarkTheme }) {
     isDarkTheme ? dashboardImage : dashboardImageLight
   );
 
-  console.log(isDarkTheme);
   const changeImage = (feature, isDarkTheme) => {
     switch (feature) {
       case "POSTImage":

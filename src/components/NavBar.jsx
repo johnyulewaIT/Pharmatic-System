@@ -22,13 +22,13 @@ function NavBar() {
     document.documentElement.classList.toggle("dark", isDarkTheme);
   }, [isDarkTheme]);
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className="flex fixed mt-3 top-0 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] lg:w-[70%] bg-slate-50 dark:bg-slate-900 z-50 shadow-md mx-auto px-8 items-center justify-between flex-wrap p-4 border border-slate-400 dark:border-slate-700 rounded-lg">
-      <div className="flex flex-shrink-0 text-white mr-6 lg:mr-72">
-        <a className="flex title-font font-medium items-center text-white mb-4">
-          Logo
+      <div className="flex flex-shrink-0 text-white mr-6 lg:mr-72 items-center">
+        <a className="flex title-font font-bold items-center dark:text-white text-slate-900  mb-4">
+          PHARMA<span className="text-green-500 text-xl">+</span>IC
         </a>
       </div>
 
@@ -58,7 +58,7 @@ function NavBar() {
         <div className="flex gap-3">
           <RouterLink
             to="/docs"
-            className="flex lg:inline-flex cursor-pointer text-green-500 border-0 px-3 py-2 rounded-md"
+            className="flex lg:inline-flex cursor-pointer text-green-500 border-0 px-1 py-2 rounded-md"
           >
             Docs
           </RouterLink>
