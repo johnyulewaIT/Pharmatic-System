@@ -261,9 +261,9 @@ function DocsBody() {
   ];
 
   return (
-    <div className="mx-2 md:mx-24 mb-24 mt-10 p-4 text-slate-800 dark:text-slate-400 ">
+    <div className=" md:mx-24 mb-24 mt-10 p-4 text-slate-800 dark:text-slate-400 ">
       <div className="flex flex-col gap-6 text-md md:text-lg">
-        <div className="flex flex-col mx-8 text-justify ">
+        <div className="flex flex-col mx-2 text-justify">
           {procedures.map((procedure, idx) => (
             <div key={idx} className="mb-8 border border-slate-700 rounded-md ">
               {procedure.image ? (

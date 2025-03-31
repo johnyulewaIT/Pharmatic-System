@@ -57,7 +57,7 @@ function DocsNavBar() {
       {/* Mobile Menu Button */}
       <button
         onClick={toggleSidebar}
-        className=" p-4 text-slate-800 dark:text-white fixed top-4 left-0 z-50 md:hidden"
+        className="text-slate-800 dark:text-white fixed top-4 left-0 z-50 md:hidden"
       >
         <HiBars3BottomLeft className={`w-14 ${isOpen ? "hidden" : "block"}`} />
         <HiBars3BottomRight className={`w-14 ${isOpen ? "block" : "hidden"}`} />
@@ -75,7 +75,7 @@ function DocsNavBar() {
       <div
         className={`fixed top-0 left-0 h-full 
               ${isOpen ? "block" : "hidden"}  md:block
-              md:w-64 text-slate-800 dark:text-slate-300 p-3 flex-col z-50 dark:bg-slate-950`} // Adjust z-index to ensure it stays above the overlay
+              md:w-64 text-slate-800 dark:text-slate-300 p-2 flex-col z-50 dark:bg-slate-950`} // Adjust z-index to ensure it stays above the overlay
       >
         <nav className={`block ${isOpen ? "block" : "hidden"} md:block mt-8`}>
           <ul className="flex flex-col">
